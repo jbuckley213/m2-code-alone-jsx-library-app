@@ -1,6 +1,7 @@
 const React = require("react")
 const Layout = require("./Layout")
 const AddAuthor = require("./components/AddAuthor")
+const AddReview = require("./components/addReview")
 
 function EditBook(props){
     return(
@@ -33,6 +34,9 @@ function EditBook(props){
             <h3>Add An Author: </h3>
 
             <AddAuthor idOfTheBook = {props.oneBook._id} />
+
+            <h3>Add Review</h3>
+            <AddReview idOfTheBook = {props.oneBook._id} />
         </Layout>
     )
 }

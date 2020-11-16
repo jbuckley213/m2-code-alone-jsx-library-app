@@ -20,7 +20,8 @@ function BookDetails(props) {
 
             <p>Summary: {props.oneBook.description}</p>
             <p>Rating: {props.oneBook.rating}</p>
-
+                {props.oneBook.review == null ? null : <p>Reviews: {props.oneBook.review}</p>
+}
             <a class="return-button" href="/books">
                 Return
             </a>

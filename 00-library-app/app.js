@@ -7,6 +7,8 @@ const logger = require('morgan');
 const bodyParser = require("body-parser")
 
 const booksRouter = require("./routes/booksRouter")
+const authorsRouter = require("./routes/authorsRouter")
+const reviewRouter = require("./routes/reviewsRouter")
 
 const app = express();
 
@@ -45,6 +47,8 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.use("/books", booksRouter)
+app.use("/authors", authorsRouter)
+app.use("/review", reviewRouter)
 
 app.get("/", (req, res, next)=>{
     res.render("Home")
